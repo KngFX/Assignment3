@@ -1,18 +1,28 @@
-
+<!-- Header Partial: Includes the common header elements from a separate file -->
 <%- include ../partials/header.ejs %>
+
+<!-- Navigation Bar Partial: Reusable navigation bar for consistent navigation across pages -->
 <%- include ../partials/nav_bar.ejs %>
 
+<!-- Main Container: Encapsulates the form and its elements -->
 <div class="container">
     <div class="row">
+        <!-- Form Column: Defines the column for the form within the grid layout -->
         <div class="col-md-6">
+            <!-- Dynamic Title: Displays the page title, received from the server -->
             <h1><%= title %></h1>
 
+            <!-- Task Form: Form element for submitting task details -->
             <form class="form" method="POST">
+                <!-- Form Row: Container for individual form elements -->
                 <div class="form-row">
+                    <!-- Task Name Input: Text field for entering the task name -->
                     <div class="form-group col-md-6">
                         <label for="titleTextField">Task Name</label>
                         <input type="text" class="form-control" id="titleTextField" placeholder="Enter Task Name">
                     </div>
+
+                    <!-- Category Select: Dropdown to select the task category -->
                     <div class="form-group col-md-6">
                         <label for="categorySelect">Category</label>
                         <select id="categorySelect" class="form-control">
@@ -23,11 +33,16 @@
                         </select>
                     </div>
                 </div>
+
+                <!-- Second Form Row: Container for date picker and priority select elements -->
                 <div class="form-row">
+                    <!-- Due Date Picker: Input for selecting the task's due date -->
                     <div class="form-group col-md-6">
                         <label for="dueDatePicker">Due Date</label>
                         <input type="date" class="form-control" id="dueDatePicker">
                     </div>
+
+                    <!-- Priority Select: Dropdown to select the task's priority -->
                     <div class="form-group col-md-6">
                         <label for="prioritySelect">Priority</label>
                         <select id="prioritySelect" class="form-control">
@@ -38,10 +53,13 @@
                         </select>
                     </div>
                 </div>
+
+                <!-- Submit Button: Button to submit the form data -->
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
     </div>
 </div>
 
+<!-- Footer Partial: Includes the common footer elements from a separate file -->
 <%- include ../partials/footer.ejs %>
