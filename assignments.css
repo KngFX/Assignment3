@@ -1,0 +1,66 @@
+/* Custom styles */
+html, body {
+  height: 100%;
+  color: #d622ed !important; /* Purple text color with higher specificity */
+  background-color: #000 !important; /* Black background color with higher specificity */
+  font-family: Arial, sans-serif; /* Example font, Bootstrap uses system default */
+}
+
+.main-container {
+  padding-top: 50px;
+}
+
+
+/* Inherit color for all body text to ensure it applies to paragraph text as well */
+body * {
+  color: inherit !important
+}
+
+/* For the navbar */
+.navbar {
+  background-color: #130027 !important; /* Custom purple shade with higher specificity */
+}
+
+/* Same for the footer */
+footer {
+  background-color: #130027 !important; /* Custom purple shade for the footer with higher specificity */
+}
+
+
+a, p, h1, h2, h3, h4, h5, h6, li {
+  color: #d622ed !important; /* Ensuring the purple text is applied */
+}
+
+.navbar-custom, .footer-custom {
+  background-color: #130027 !important;
+}
+
+.text-purple {
+  color: #a991d4; 
+}
+
+.text-muted {
+  color: #6c757d; 
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem; 
+}
+
+/* Ensures the video is responsive */
+video.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem; 
+}
