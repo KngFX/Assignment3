@@ -1,0 +1,10 @@
+body {
+  padding: 50px;
+  font: 16px "Times New Roman", Georgia, Serif;
+  background-color: #201f1f; /* background color */
+}
+
+a {
+  color: #9ee84a; /* Color choice */
+  text-decoration: underline; /* Underline to make links more apparent */
+}

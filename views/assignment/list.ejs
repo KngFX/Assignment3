@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<%- include ../partials/header.ejs %>
+<body>
+<%- include ../partials/nav_bar.ejs %>
+<main class="container">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <a href="/assignmentslist/add" class="btn btn-primary" role="button"><i class="fas fa-plus-circle"></i> Add Assignment</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <% assignments.forEach(function(assignment) { %>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= assignment.name %></h5>
+                        <p class="card-text"><%= assignment.description %></p>
+                        <a href="/assignmentslist/edit/<%= assignment._id %>" class="btn btn-primary">Edit</a>
+                        <a href="/assignmentslist/delete/<%= assignment._id %>" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</main>
+<%- include ../partials/footer.ejs %>
+</body>
+</html>
