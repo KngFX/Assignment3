@@ -3,12 +3,26 @@
   <head>
     <title><%= title %></title>
     <%- include partials/header.ejs %>
-    
   </head>
   <body>
-    
     <%- include partials/nav_bar.ejs %>
-    <h1>Welcome to the  <%= title %> page</h1>
+    <h1>Greetings to the <%= title %> Page</h1>
+
+    <div class="welcome-message">
+        <p>Welcome! It's a pleasure to have you here on my latest creation — an innovative website born from my passion and learning in the Web and Script Programming course, guided by the insightful Mr. Sheikh. This site is not just an ordinary assignment tracker; it represents my evolving journey in web development.</p>
+
+        <p>As you explore, you'll find three primary sections, each crafted for a unique purpose:</p>
+        <ul>
+            <li><strong>Home:</strong> Here you'll find an overview and tips on how to get the most out of this assignment tracker.</li>
+            <li><strong>Assignments:</strong> A tool to organize your academic tasks, offering features to add, update, and remove assignments, helping you stay on top of your studies.</li>
+            <li><strong>Schedule:</strong> A well-organized calendar to help you remember important dates and academic commitments.</li>
+        </ul>
+
+        <p>One of the key features of this website is its user-friendly design. The interface is straightforward and easy to use, promoting an enjoyable user experience. This goes hand in hand with the core functionality of effective assignment management and scheduling.</p>
+
+        <p>I encourage you to delve into each section and make use of the functionalities available. Your input and suggestions are highly appreciated, as they will aid in the continuous improvement of this website. Thank you for stopping by, and I hope this platform aids in making your academic journey more organized and productive!</p>
+    </div>
+
     <%- include partials/footer.ejs %>
   </body>
 </html>
