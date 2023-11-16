@@ -1,9 +1,9 @@
 /* Custom styles */
 html, body {
   height: 100%;
-  color: #d622ed !important; /* Purple text color with higher specificity */
-  background-color: #000 !important; /* Black background color with higher specificity */
-  font-family: Arial, sans-serif; /* Example font, Bootstrap uses system default */
+  color: #d622ed !important; /* Color of the text */
+  background-color: #000 !important; /* Background Color */
+  font-family: Arial, sans-serif; /* Fonts */
 }
 
 .main-container {
@@ -11,7 +11,7 @@ html, body {
 }
 
 
-/* Inherit color for all body text to ensure it applies to paragraph text as well */
+/* Inherit color for all body text */
 body * {
   color: inherit !important
 }
@@ -28,7 +28,7 @@ footer {
 
 
 a, p, h1, h2, h3, h4, h5, h6, li {
-  color: #d622ed !important; /* Ensuring the purple text is applied */
+  color: #d622ed !important; /* Ensuring the colored text is applied */
 }
 
 .navbar-custom, .footer-custom {
