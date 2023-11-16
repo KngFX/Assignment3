@@ -1,24 +1,38 @@
-
 <!DOCTYPE html>
 <html>
+<!-- Header Partial: Includes the common header elements -->
 <%- include ../partials/header.ejs %>
 <body>
+<!-- Navigation Bar Partial: Reusable navigation bar for site navigation -->
 <%- include ../partials/nav_bar.ejs %>
+
+<!-- Main Content Area: Container for the main content of the page -->
 <main class="container">
+    <!-- Button Row: Contains the button to add a new assignment -->
     <div class="row mb-4">
         <div class="col-md-12">
-            <a href="/assignmentslist/add" class="btn btn-primary" role="button"><i class="fas fa-plus-circle"></i> Add Assignment</a>
+            <!-- Add Assignment Button: Links to the page for adding a new assignment -->
+            <a href="/assignmentslist/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Add Assignment
+            </a>
         </div>
     </div>
 
+    <!-- Assignments Grid: Displays a grid of assignment cards -->
     <div class="row">
+        <!-- Loop Through Assignments: Iterates over each assignment and creates a card -->
         <% assignments.forEach(function(assignment) { %>
             <div class="col-md-4 mb-3">
                 <div class="card">
+                    <!-- Card Body: Contains details about the assignment -->
                     <div class="card-body">
+                        <!-- Assignment Title: Displays the name of the assignment -->
                         <h5 class="card-title"><%= assignment.name %></h5>
+                        <!-- Assignment Description: Displays the description of the assignment -->
                         <p class="card-text"><%= assignment.description %></p>
+                        <!-- Edit Button: Links to the edit page for the assignment -->
                         <a href="/assignmentslist/edit/<%= assignment._id %>" class="btn btn-primary">Edit</a>
+                        <!-- Delete Button: Links to the delete action for the assignment -->
                         <a href="/assignmentslist/delete/<%= assignment._id %>" class="btn btn-danger">Delete</a>
                     </div>
                 </div>
@@ -26,6 +40,8 @@
         <% }); %>
     </div>
 </main>
+
+<!-- Footer Partial: Includes the common footer elements -->
 <%- include ../partials/footer.ejs %>
 </body>
 </html>
