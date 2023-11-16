@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Page Title: Sets the title of the error page -->
     <title>Error</title>
+
+    <!-- Stylesheet Link: Links to the main CSS file for styling -->
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
+    <!-- Container: Wraps the content of the error page -->
     <div class="container">
+        <!-- Error Message: Displays the error message dynamically passed from the server -->
         <h1 class="error-message"><%= message %></h1>
+
+        <!-- Error Code: Shows the HTTP status code related to the error -->
         <h2>Error Code: <%= error.status %></h2>
+
+        <!-- Error Stack: Displays the technical stack trace of the error for debugging -->
         <pre class="error-stack"><%= error.stack %></pre>
     </div>
 </body>
