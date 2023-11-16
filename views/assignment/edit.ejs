@@ -1,29 +1,41 @@
-
+<!-- Header Partial: Includes the common header elements from a separate file -->
 <%- include ../partials/header.ejs %>
+
+<!-- Navigation Bar Partial: Reusable navigation bar for consistent navigation across pages -->
 <%- include ../partials/nav_bar.ejs %>
 
+<!-- Main Container: Encapsulates the form and its elements within a grid layout -->
 <div class="container">
     <div class="row">
+        <!-- Full-width Column: Utilizes the entire width of the row for the form -->
         <div class="col-md-12">
+            <!-- Dynamic Title: Displays the page title, received from the server -->
             <h1><%= title %></h1>
 
+            <!-- Task Form: Form element for updating task details -->
             <form class="form" method="POST">
+                <!-- Accordion: Organizes content into collapsible sections -->
                 <div id="accordion">
+                    <!-- Card for Basic Information: Contains input fields for basic task details -->
                     <div class="card">
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
+                                <!-- Collapsible Button: Toggles the display of the basic information section -->
                                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     Basic Information
                                 </button>
                             </h5>
                         </div>
 
+                        <!-- Collapsible Content: Displays input fields for basic information -->
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body">
+                                <!-- Task Name Input: Text field for entering the task name -->
                                 <div class="form-group">
                                     <label for="titleTextField">Task Name</label>
                                     <input type="text" class="form-control" id="titleTextField" placeholder="Enter Task Name">
                                 </div>
+                                <!-- Description Text Area: Field for entering a detailed description of the task -->
                                 <div class="form-group">
                                     <label for="descriptionTextArea">Description</label>
                                     <textarea class="form-control" id="descriptionTextArea" rows="3"></textarea>
@@ -31,20 +43,25 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Card for Additional Details: Contains input fields for more task details -->
                     <div class="card">
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
+                                <!-- Collapsible Button: Toggles the display of the additional details section -->
                                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     Additional Details
                                 </button>
                             </h5>
                         </div>
+                        <!-- Collapsible Content: Displays input fields for additional details -->
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                             <div class="card-body">
+                                <!-- Due Date Picker: Input for selecting the task's due date -->
                                 <div class="form-group">
                                     <label for="dueDatePicker">Due Date</label>
                                     <input type="date" class="form-control" id="dueDatePicker">
                                 </div>
+                                <!-- Status Select: Dropdown to select the task's current status -->
                                 <div class="form-group">
                                     <label for="statusSelect">Status</label>
                                     <select id="statusSelect" class="form-control">
@@ -58,10 +75,12 @@
                         </div>
                     </div>
                 </div>
+                <!-- Submit Button: Button to submit the updated task details -->
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>
         </div>
     </div>
 </div>
 
+<!-- Footer Partial: Includes the common footer elements from a separate file -->
 <%- include ../partials/footer.ejs %>
